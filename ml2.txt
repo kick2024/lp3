@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 15 22:13:13 2023
-
-@author: Ritesh
-"""
+ml practical 2
 
 import pandas as pd
 import numpy as np
@@ -29,8 +24,10 @@ X = scale(X)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
 X_train.shape
 
+#import KNN classifier from sklearn. neighbors
 from sklearn.neighbors import KNeighborsClassifier
 
+#KNN with k = 5
 model_knn = KNeighborsClassifier(n_neighbors=5)
 model_knn.fit(X_train, y_train)
 
@@ -52,9 +49,12 @@ print('Mean Absolute Error:', meanAbErr)
 print('Mean Square Error:', meanSqErr)
 print('Root Mean Square Error:', rootMeanSqErr)
 
-########################################### SVC##########################################
+
+########################################### SVC?
+?##########################################
 #import SVM classifier (SVC) from sklearn.svm
 from sklearn.svm import SVC
+
 
 # cost C = 1
 model_svc = SVC(C = 1)
@@ -79,3 +79,4 @@ print('R squared: {:.2f}'.format(model_svc.score(X,y)*100))
 print('Mean Absolute Error:', meanAbErr)
 print('Mean Square Error:', meanSqErr)
 print('Root Mean Square Error:', rootMeanSqErr)
+
